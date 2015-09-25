@@ -1,0 +1,68 @@
+body {
+margin : 0px;
+padding: 0px;
+
+}
+
+.header{
+background-color : blue;
+width:  100%;
+padding: 20px;
+text-align: center;
+}
+
+.nav  ul{
+background-color : green;
+text-align:center;
+margin: 0px;
+  padding: 20px;
+  -webkit-transition : height 0.5s;
+  transition : height 0.5s;
+  overflow: hidden;
+}
+
+.nav  ul  li{
+display :inline;
+padding: 20px;
+background-color : orange;
+
+}
+.nav  ul  li:hover{
+background-color: red;
+}
+.content{
+
+padding: 80px;
+padding-top: 20px;
+}
+
+.myMenu{
+width : 100%;
+background-color : orange;
+cursor: pointer;
+padding: 20px;
+color: white;
+background-color : green;
+display:none;
+}
+
+
+
+@media screen and (max-width: 500px) {
+.nav  ul  li{
+display:block;
+}
+
+.nav  ul{
+padding:0px;
+height: 0px;
+}
+.nav .visible{
+height: 232px;
+}
+
+.myMenu{
+display:block;
+}
+
+}

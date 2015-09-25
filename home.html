@@ -1,0 +1,46 @@
+
+<html>
+<head>
+<title> My Navigation</title>
+<link rel="stylesheet" href = "myStyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+<div class = "header">
+<h1>My Navigation Bar </h1>
+</div>
+<div  class ="myMenu">Menu</div>
+<div  class ="nav">
+<ul>
+<a><li> Page 1 </li></a>
+<a><li> Page 2 </li></a>
+<a><li> Page 3 </li></a>
+<a><li> Page 4 </li></a>
+</ul>
+
+</div>
+
+<div class = "content">
+
+Visited this place with much enthusiasm as I had heard much about this place.
+ Got lost by the google maps and had a hard time locating the place. Anyways, an amazing place to chill with friends. A small place but good ambi
+ ence and nicely decorated. Ordered a Hot Chocolate Fudge and an
+ Unusual Oreo. They were amazing. It was a perfec
+ t day that ended
+ well with that visit. L
+ ooking forward for my next visi
+
+</div>
+
+</body>
+
+<script>
+$(document).ready(function(){
+    $(".myMenu").click(function(){
+        $(".nav ul").toggleClass('visible'); 
+
+    });
+});
+
+</script>
+</html>
