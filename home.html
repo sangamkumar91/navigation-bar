@@ -9,13 +9,13 @@
 <div class = "header">
 <h1>My Navigation Bar </h1>
 </div>
-<div  class ="myMenu">Menu</div>
+<!-- <div  class ="myMenu">Menu</div> -->
 <div  class ="nav">
 <ul>
-<a><li> Page 1 </li></a>
-<a><li> Page 2 </li></a>
-<a><li> Page 3 </li></a>
-<a><li> Page 4 </li></a>
+<li class="open close allopen"> Page 1 </li>
+<li class ="open close allopen"> Page 2 </li>
+<li class ="open close allopen"> Page 3 </li>
+<li class="open close allopen"> Page 4 </li>
 </ul>
 
 </div>
@@ -36,11 +36,53 @@ Visited this place with much enthusiasm as I had heard much about this place.
 
 <script>
 $(document).ready(function(){
-    $(".myMenu").click(function(){
-        $(".nav ul").toggleClass('visible'); 
+    
 
+			$(".nav ul li").toggleClass('allopen');
+			$(".nav ul li").toggleClass('open');
+			$(".nav ul").children(":first").toggleClass("open");
+			$(".nav ul").children(":first").toggleClass("close");
+			
+			$(".nav ul li").click(function(){
+			if(document.documentElement.clientWidth > 500)
+			{
+			
+				if($(this).hasClass('open'))
+				{
+						return;
+				}
+				else
+				{
+						$(".nav ul .open").toggleClass('close');
+						$(".nav ul .open").toggleClass('open');
+						$(this).toggleClass('close');
+						$(this).toggleClass('open');
+				}
+				return;
+			
+			}
+			
+			if($(this).hasClass('open'))
+			{
+					$(".nav ul").toggleClass('visible'); 
+					$(this).toggleClass('open');
+					$(".nav ul .close").toggleClass('close');
+					
+			}
+			else
+			{
+			
+					$(".nav ul li").toggleClass('close');
+					$(this).toggleClass('close');
+					$(this).toggleClass('open');
+					$(".nav ul").toggleClass('visible'); 
+			
+			}
+			
+			});
+	
     });
-});
+
 
 </script>
 </html>

@@ -12,10 +12,10 @@ text-align: center;
 }
 
 .nav  ul{
-background-color : green;
+background-color : orange;
 text-align:center;
+padding:20px;
 margin: 0px;
-  padding: 20px;
   -webkit-transition : height 0.5s;
   transition : height 0.5s;
   overflow: hidden;
@@ -24,7 +24,13 @@ margin: 0px;
 .nav  ul  li{
 display :inline;
 padding: 20px;
+
 background-color : orange;
+  -webkit-transition : height 0.5s;
+  transition : height 0.5s;
+  -webkit-transition : padding 0.5s;
+  transition : padding 0.5s;
+
 
 }
 .nav  ul  li:hover{
@@ -35,15 +41,11 @@ background-color: red;
 padding: 80px;
 padding-top: 20px;
 }
-
-.myMenu{
-width : 100%;
-background-color : orange;
-cursor: pointer;
+.nav  ul  .open{
 padding: 20px;
-color: white;
+height : 18px;
 background-color : green;
-display:none;
+
 }
 
 
@@ -51,18 +53,36 @@ display:none;
 @media screen and (max-width: 500px) {
 .nav  ul  li{
 display:block;
+overflow: hidden;
+
 }
+
+.nav  ul  .open{
+padding: 20px;
+height : 18px;
+background-color : green;
+
+}
+
+.nav  ul  .close{
+height : 0px;
+padding: 0px;
+}
+
+
 
 .nav  ul{
 padding:0px;
-height: 0px;
+height: 58px;
 }
 .nav .visible{
 height: 232px;
 }
+.nav .visible li{
+padding: 20px;
+background-color : orange;
 
-.myMenu{
-display:block;
 }
+
 
 }
